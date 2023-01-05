@@ -3,7 +3,7 @@
 <title>Hello World!</title>
 </head>
 <body>
-	<h1>Webhook triggered </h1>
+	<h1> Webhook triggered succesfully </h1>
 	<p>
 		It is now
 		<%= new java.util.Date() %></p>
