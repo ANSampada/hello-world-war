@@ -19,7 +19,7 @@ pipeline {
 //         }
         stage('Build') {
             steps {
-                dir('hello-world-war'){
+                dir('hello-world-war') {
                 sh 'mvn package'
                 }
             }
