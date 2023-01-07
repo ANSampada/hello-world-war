@@ -9,26 +9,26 @@ pipeline {
                 sh 'git clone https://github.com/ANSampada/hello-world-war.git'
             }
         }
-        stage('install tomcat') {
+//         stage('install tomcat') {
+//             steps {
+//                 sh 'echo insalling tomcat'
+//                 sh 'chmod 755 ${WORKSPACE}/hello-world-war/tomcat_insatalation'
+//                 sh '${WORKSPACE}/hello-world-war/tomcat_insatalation'
+//                 sh 'echo succesflly installed tomcat'
+//             }
+//         }
+        stage('Build') {
             steps {
-                sh 'echo insalling tomcat'
-                sh 'chmod 755 ${WORKSPACE}/hello-world-war/tomcat_insatalation'
-                sh '${WORKSPACE}/hello-world-war/tomcat_insatalation'
-                sh 'echo succesflly installed tomcat'
+                dir('hello-world-war'){
+                sh 'mvn package'
+                }
             }
         }
-//         stage('Build') {
-//             steps {
-//                 dir('hello-world-war'){
-//                 sh 'mvn package'
-//                 }
-//             }
-//         }
-//         stage('Deploy step') {
-//              steps {
-//                  sh 'sudo cp ${WORKSPACE}/hello-world-war/target/hello-world-war-1.0.0.war /var/lib/tomcat9/webapps'       
-//             }
-//         }
+        stage('Deploy step') {
+             steps {
+                 sh 'sudo cp ${WORKSPACE}/hello-world-war/target/hello-world-war-1.0.0.war /var/lib/tomcat9/webapps'       
+            }
+        }
     }
 }
 
