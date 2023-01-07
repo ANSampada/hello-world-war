@@ -1,6 +1,6 @@
 pipeline {
     agent {
-        label "production"
+        label "deploy"
     }
     stages {
         stage('clone step') {
