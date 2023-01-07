@@ -12,6 +12,7 @@ pipeline {
         stage('install tomcat') {
             steps {
                 sh 'echo insalling tomcat'
+                sh 'echo ${WORKSPACE}'
                 sh 'chmod 777 ${WORKSPACE}/hello-world-war/deploy_pipeline'
                 sh '${WORKSPACE}/hello-world-war/deploy_pipeline'
                 sh 'echo succesflly installed tomcat'
