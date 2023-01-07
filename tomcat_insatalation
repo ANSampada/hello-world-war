@@ -7,7 +7,7 @@ sudo sed -i 's/connector port="8080"/connector port="9090"/Ig' /etc/tomcat9/serv
 sudo sed -i '56 i <role rolename="admin-gui"/>' /etc/tomcat9/tomcat-users.xml
 sudo sed -i '57 i <role rolename="manager-gui"/>' /etc/tomcat9/tomcat-users.xml
 sudo sed -i '58 i <user username="tomcat" password="pass" roles="admin-gui,manager-gui"/>
-restart tomcat9
+#restart tomcat9
 sudo systemctl restat tomcat9
 sudo systemctl status tomcat9
 #allow jenkins user without password
