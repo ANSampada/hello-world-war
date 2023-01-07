@@ -12,8 +12,8 @@ pipeline {
         stage('install tomcat') {
             steps {
                 sh 'echo insalling tomcat'
-                sh 'chmod 777 ${WORKSPACE}/hello-world-war/tomcat_insatalation'
-                sh '${WORKSPACE}/hello-world-war/tomcat_insatalation'
+                sh 'chmod 777 ${WORKSPACE}/hello-world-war/tomcat_insatalation.sh'
+                sh '${WORKSPACE}/hello-world-war/tomcat_insatalation.sh'
                 sh 'echo succesflly installed tomcat'
             }
         }
