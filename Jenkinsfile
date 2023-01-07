@@ -1,6 +1,6 @@
 pipeline {
     agent {
-        label "sampada"
+        label "ubuntu"
     }
     stages {
         stage('clone step') {
