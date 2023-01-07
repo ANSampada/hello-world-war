@@ -1,6 +1,6 @@
 pipeline {
     agent {
-        label "deploy"
+        label "sampada"
     }
     stages {
         stage('clone step') {
