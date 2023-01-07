@@ -17,18 +17,18 @@ pipeline {
                 sh 'echo succesflly installed tomcat'
             }
         }
-        stage('Build') {
-            steps {
-                dir('hello-world-war'){
-                sh 'mvn package'
-                }
-            }
-        }
-        stage('Deploy step') {
-             steps {
-                 sh 'sudo cp ${WORKSPACE}/hello-world-war/target/hello-world-war-1.0.0.war /var/lib/tomcat9/webapps'       
-            }
-        }
+//         stage('Build') {
+//             steps {
+//                 dir('hello-world-war'){
+//                 sh 'mvn package'
+//                 }
+//             }
+//         }
+//         stage('Deploy step') {
+//              steps {
+//                  sh 'sudo cp ${WORKSPACE}/hello-world-war/target/hello-world-war-1.0.0.war /var/lib/tomcat9/webapps'       
+//             }
+//         }
     }
 }
 
