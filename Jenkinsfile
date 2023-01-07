@@ -3,12 +3,12 @@ pipeline {
         label "sam"
     }
     stages {
-        stage('clone step') {
-            steps {
-                sh 'rm -rf hello-world-war'
-                sh 'git clone https://github.com/ANSampada/hello-world-war.git'
-            }
-        }
+//         stage('clone step') {
+//             steps {
+//                 sh 'rm -rf hello-world-war'
+//                 sh 'git clone https://github.com/ANSampada/hello-world-war.git'
+//             }
+//         }
 //         stage('install tomcat') {
 //             steps {
 //                 sh 'echo insalling tomcat'
