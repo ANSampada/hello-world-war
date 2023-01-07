@@ -5,12 +5,15 @@ pipeline {
         stage('clone step') {
             steps {
                 sh 'rm -rf hello-world-war'
-                sh 'chmod 777 ${workspace}/hello-world-war/
+                sh 'git clone https://github.com/ANSampada/hello-world-war.git'
             }
         }
         stage('install tomcat') {
             steps {
-                sh 'mvn package'
+                sh 'echo insalling tomcat'
+                sh 'chmod 777 ${WORKSPACE}/jenkins/tomcat_insatalation.sh'
+                sh '${WORKSPACE}/jenkins/tomcat_insatalation.sh'
+                sh 'echo succesflly installed tomcat'
             }
         }
         stage('Build') {
