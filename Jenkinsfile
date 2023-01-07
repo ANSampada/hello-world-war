@@ -1,10 +1,16 @@
 pipeline {
-    agent any
+    agent {
+        label "linux"
     stages {
         stage('clone step') {
             steps {
                 sh 'rm -rf hello-world-war'
-                sh 'git clone https://github.com/venkibiligere/hello-world-war.git'
+                sh 'chmod 777 ${workspace}/hello-world-war/
+            }
+        }
+        stage('install tomcat') {
+            steps {
+                sh 'mvn package'
             }
         }
         stage('Build') {
