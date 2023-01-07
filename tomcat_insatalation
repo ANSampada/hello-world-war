@@ -12,5 +12,5 @@ sudo sed -i '58 i <user username="tomcat" password="pass" roles="admin-gui,manag
 sudo systemctl restart tomcat9
 sudo systemctl status tomcat9
 #allow jenkins user without password
-sudo sed -i '45 i jenkins ALL=(ALL) NOPASSWD:ALL' /etc/sudoers
-sudo sed -i '46 i jenkins ALL=(ALL) NOPASSWD: /var/lib/jenkins/workspace' /etc/sudoers
+#sudo sed -i '45 i jenkins ALL=(ALL) NOPASSWD:ALL' /etc/sudoers
+#sudo sed -i '46 i jenkins ALL=(ALL) NOPASSWD: /var/lib/jenkins/workspace' /etc/sudoers
