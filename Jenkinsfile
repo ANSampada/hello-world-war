@@ -1,6 +1,6 @@
 pipeline {
     agent {
-        label "ubuntu"
+        label "tomcat"
     }
     stages {
         stage('clone step') {
